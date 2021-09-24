@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <!--
+    <a class="btn btn-info btn-lg m-5" href="/create" role="button">CREATE NEW TASK</a>
+    -->
+    {% for card in cards %}
+    <div class="card w-50 mb-3" style="margin: auto;">
+        <div class="card-body">
+            <h2 class="card-title">{{ card.marktext }}:{{ card.number }}</h2>
+            <!--
+            <a class="btn btn-secondary btn-sm" href="/show/{{ card.id }}" role="button">Detail</a>
+            <a class="btn btn-success btn-sm" href="/update/{{ card.id }}" role="button">update</a>
+            <a class="btn btn-danger btn-sm" href="/delete/{{ card.id }}" role="button">Delete</a>
+            -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
